@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="'row">
+  <div class="row">
     <div class="col-sm-12">
       <table *ngIf="cars.length > 0; else noCarsInfo" class="cs-table table table-striped">
         <thead>
@@ -34,4 +34,5 @@
       </ng-template>
     </div>
   </div>
+  <app-total-cost [totalCost]="totalCost"></app-total-cost>
 </div>
