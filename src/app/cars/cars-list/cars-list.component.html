@@ -22,7 +22,6 @@
             <td> {{ car.client.firstName }} {{ car.client.surname }} </td>
             <td> {{ car.cost }} </td>
             <td> ACTION PLACEHOLDER </td>
-
           </tr>
         </tbody>
       </table>
@@ -34,5 +33,12 @@
       </ng-template>
     </div>
   </div>
-  <app-total-cost [totalCost]="totalCost"></app-total-cost>
+  <app-total-cost [totalCost]="totalCost" (shownGross)="onShownGross($event)"></app-total-cost>
+  <div *ngIf="grossCost" class="row">
+    <div class="col-sm-12">
+      <div class="total-cost">
+        <p class="text-right">TOTAL GROSS COST: {{grossCost}} PLN</p>
+      </div>
+    </div>
+  </div>
 </div>
